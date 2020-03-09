@@ -17,7 +17,7 @@ export class AppComponent {
     orderedPizzas: Pizza[] = [];
 
 
-    generateBayreuthPizza(type: string, pizzaFactory: PizzaFactory) {
+    generatePizza(type: string, pizzaFactory: PizzaFactory) {
         const pizza = pizzaFactory.prepare(type);
         this.orderedPizzas.push(pizza);
     }

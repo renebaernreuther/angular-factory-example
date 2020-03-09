@@ -8,10 +8,28 @@ Bisherige Bestellungen:
 <button *ngIf="orderedPizzas.length !== 0" (click)="this.orderedPizzas = []">Bestellungen löschen</button>
 <hr>
 <h4>Bayreuther Pizzaservice</h4>
-<button (click)="generateBayreuthPizza('wagner', this.bayreutherPizzaFactory)">Die offizielle Richard Wagner Pizza</button>
-<button (click)="generateBayreuthPizza('bier', this.bayreutherPizzaFactory)">Wer es eher alkoholisch mag...</button>
+<button (click)="generatePizza('wagner', this.bayreutherPizzaFactory)">Die offizielle Richard Wagner Pizza</button>
+<button (click)="generatePizza('bier', this.bayreutherPizzaFactory)">Wer es eher alkoholisch mag...</button>
 <hr>
 <!-- TODO: Implementiere eine Simple Factory, die die verschiedenen PizzaStores zurückliefert -->
 <h4>Kulmbacher Pizzaservice</h4>
-<button (click)="generateBayreuthPizza('bier', null)">Die Kulmbacher Bier Pizza!!</button>
-<button (click)="generateBayreuthPizza('salami', null)">Salami oh ja</button>
+<button (click)="generatePizza('bier', null)">Die Kulmbacher Bier Pizza!!</button>
+<button (click)="generatePizza('salami', null)">Salami oh ja</button>
+<hr>
+<h4>Aufgaben</h4>
+<ol>
+    <li>Implementiere eine Simple Factory, die die verschiedenen Pizzastores abhängig vom Standort zurückliefert.
+        Diese soll in der app.component.ts fest hinterlegt werden und beim Aufruf von generatePizza benutzt werden.
+    </li>
+    <li>
+        Implementiere den Kulmbacher Pizza Store, sodass dieser die Salami und die Bierpizza erstellt. Die dazu passenden
+        Klassen müssen erst erstellt werden. Vorsicht: Die Bayreuther Bier Pizza ist nicht diesselbe wie die Kulmbacher
+        Bier Pizza.
+    </li>
+    <li>
+        Erweitere die Pizza-Welt um ein weiteres Franchies deiner Wahl mit zwei Pizzen deiner Wahl, die noch nicht existieren.
+    </li>
+    <li>
+        Jedes Franchines erhält eine Schinkenpizza. Implementiere diese. Wo ist das Problem?
+    </li>
+</ol>
